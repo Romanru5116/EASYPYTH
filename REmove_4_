@@ -1,0 +1,11 @@
+#Избавиться  от  цифры'4' в списке numbers.- т.е. удалить все упоминания цифры «4» в списке numbers и затем вывести полученный список. 
+#numbers вводить не нужно
+
+
+i=0
+numb2 = []
+while i<len(numbers):
+    if numbers[i]!=4: 
+       numb2.append(numbers[i])
+    i +=1
+print(numb2)
