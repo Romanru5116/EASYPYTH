@@ -1,0 +1,23 @@
+#написать программу которая вводит мин и макс цифры из числа натурального
+n = int(input())
+
+# Инициализируем переменные первой цифрой числа
+# (или крайними значениями 0 и 9)
+dig_min = 9
+dig_max = 0
+
+while n > 0:
+    current_dig = n % 10  # Получаем последнюю цифру
+    
+    if current_dig < dig_min:
+       dig_min = current_dig
+    if current_dig > dig_max:
+       dig_max = current_dig
+        
+    n //= 10  # Отрезаем последнюю цифру
+print(dig_min)
+print(dig_max)
+
+
+
+
