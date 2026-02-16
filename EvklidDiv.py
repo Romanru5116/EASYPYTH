@@ -1,0 +1,7 @@
+#НОД через деление
+a, b = map(int, input().split())
+while b != 0:
+    a %= b
+    a, b = b, a  # Меняем числа местами
+
+print(a)
