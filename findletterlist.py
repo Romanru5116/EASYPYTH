@@ -3,5 +3,5 @@ s=input()
 sentence=input()
 words= sentence.split()
 for i in words:
-    if s in i:
+    if s in i.lower():
         print(i)
