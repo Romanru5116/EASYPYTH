@@ -14,7 +14,11 @@
  до 
  и увеличить счетчик для каждого значения true
 
+import math
 n=int(input())
 IsPrime=[true]*n
 is_prime[0] = is_prime[1] = False
-for 
+for p in range(2,2n**0.5)
+               if IsPrime[p]:
+                for i in range(i * i, 2n, p):
+                IsPrime[i] = False
