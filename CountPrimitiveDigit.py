@@ -8,17 +8,22 @@
 Проходить циклом Проходить циклом 
  от 2 до корень из 2х
  .
-Если isPrime[i] истинно, то пометить все кратные ему числа (
-) как false.
-Подсчитать результат: Пройти циклом по массиву isPrime в диапазоне от 
- до 
- и увеличить счетчик для каждого значения true
-
-import math
 n=int(input())
-IsPrime=[true]*n
-is_prime[0] = is_prime[1] = False
-for p in range(2,2n**0.5)
-               if IsPrime[p]:
-                for i in range(i * i, 2n, p):
-                IsPrime[i] = False
+limit = 2 * n + 1
+n=int(input())
+limit = 2 * n + 1
+# Инициализируем массив для решета Эратосфена
+sieve = [True] * limit
+sieve[0] = sieve[1] = False
+    
+# Алгоритм Решета Эратосфена до 2n
+for p in range(2, int(limit**0.5) + 1):
+    if sieve[p]:
+      for i in range(p * p, limit, p):
+        sieve[i] = False
+    
+    # Считаем простые числа в интервале (n, 2n)
+    count = sum(1 for p in range(n + 1, limit) if sieve[p])
+print(count)
+
+
