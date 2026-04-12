@@ -13,4 +13,4 @@ for a in range(n+1):
         if a + b ** 2 == m and a ** 2 + b == n:
             count += 1
 print(count)
- FOR COMMIT
+ # FOR COMMIT
