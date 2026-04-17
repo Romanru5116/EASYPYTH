@@ -1,0 +1,25 @@
+# код ищет цифры в строчках из строки message
+#код печатает только первое слово из первого подходящего сообщения,
+found = False 
+#item - строчки в исходной переменной,
+# word - это слова в этих строчках
+for item in messages:
+    # Собираем слова, в которых есть хотя бы одна цифра
+    words_with_digits = [word for word in item.split() if any(char.isdigit() for char in word)]
+        
+    # Если нашли слова и еще ничего не печатали
+    if words_with_digits and not found:
+        print(words_with_digits[0])  # Печатаем только первое слово
+        found = True
+        break 
+
+if not found:
+    print("Кодовое слово не найдено")
+        
+
+
+
+
+
+
+
