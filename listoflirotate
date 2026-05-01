@@ -1,0 +1,11 @@
+# еcть подсписки в списке values его надо обработать-добавить n в конце и начале
+# если пустой-просто записать n
+or sublist in values:
+    if len(sublist) > 0:
+        # Добавляем n в начало и конец подсписка
+        new_values.append([n] + sublist + [n])
+    else:
+        # Если список пуст, добавляем [n, n] (или [n] по желанию)
+        new_values.append([n, n])
+
+print(new_values)
