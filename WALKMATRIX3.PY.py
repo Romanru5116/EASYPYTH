@@ -9,6 +9,6 @@ for i in range(N):
 
 # Вывод матрицы (обход столбцов справа налево)
 for row in range(N):
-    for col in range(M-1, -1, -1):
-           print(inp_list[row][col], end=' ')
+    for col in range(M - 1, -1, -1):
+        print(inp_list[row][col], end=' ')
     print()
