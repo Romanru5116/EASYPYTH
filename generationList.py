@@ -12,5 +12,4 @@ phrase = 'Take only the words that start with t in this sentence'
 
 # Генератор списков для отбора слов
 t_words = [word for word in phrase.split() if word.startswith('t') or word.startswith('T')]
-
 print(t_words)
