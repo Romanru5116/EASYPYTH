@@ -1,0 +1,26 @@
+# дан словарь - страна город. есть ввод от пользователя - определить в какую страну входит город либо вывести ошибку
+#словарь - ключ: название города
+countries = {
+    "Sweden": ["Stockholm", "Göteborg", "Malmö"],
+    "Norway": ["Oslo", "Bergen", "Trondheim"],
+    "England": ["London", "Birmingham", "Manchester"],
+    "Germany": ["Berlin", "Hamburg", "Munich"],
+    "France": ["Paris", "Marseille", "Toulouse"]
+}
+
+# вводим город
+city = input()
+
+# Флаг для отслеживания того, нашли ли мы страну
+found = False
+
+# Проходим по словарю: country — ключ (страна), cities — значение (список городов)
+for country, cities in countries.items():
+    if city in cities:
+        print(f"INFO: {city} is a city in {country}")
+        found = True
+        break  # Выходим из цикла, так как город найден
+
+# Если после перебора всех стран город так и не нашли
+if not found:
+    print(f"ERROR: Country for {city} not found")
