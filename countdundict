@@ -1,0 +1,12 @@
+# подсчет числва вхождений символов
+
+# Считываем строку, разбиваем по пробелам и преобразуем каждое значение в int
+numbers = [int(x) for x in input().split()]
+
+# Создаем пустой словарь для подсчета
+freq_dict = {}
+
+for num in numbers:
+  freq_dict[num] = freq_dict.get(num, 0) + 1
+
+print(freq_dict)
